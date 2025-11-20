@@ -13,12 +13,12 @@ import {
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 function JobPostCard({ job }) {
-    
+    /*
     // 确保 requiredSkills 是一个数组，以便使用 map()
     const skillsArray = Array.isArray(job.requiredSkills) 
         ? job.requiredSkills 
         : (job.requiredSkills ? job.requiredSkills.split(',').map(s => s.trim()) : []);
-
+*/
     return (
         // Material UI Card (任务要求推荐使用的组件)
         <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -26,7 +26,7 @@ function JobPostCard({ job }) {
                 
                 {/* 职位名称 (Job Title) */}
                 <Typography gutterBottom variant="h5" component="div">
-                    {job.title}
+                    {job.jobTitle}
                 </Typography>
                 
                 {/* 薪水 (Salary) - 任务要求 */}
@@ -39,7 +39,7 @@ function JobPostCard({ job }) {
                     {job.description}
                 </Typography>
 
-                {/* 所需技能 (Required Skills) - 任务要求 */}
+                {/* 所需技能 (Required Skills) - 任务要求
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mt: 1 }}>
                     <Typography variant="body2" sx={{ fontWeight: 'bold' }}>Skills:</Typography>
                     {skillsArray.length > 0 ? (
@@ -49,11 +49,11 @@ function JobPostCard({ job }) {
                     ) : (
                          <Chip label="Skills not specified" size="small" color="default" />
                     )}
-                </Box>
+                </Box> */}
 
                 {/* 最后更新时间 */}
                 <Typography variant="caption" display="block" color="text.disabled" sx={{ mt: 2 }}>
-                    {job.lastUpdated}
+                    {job.updatedAt}
                 </Typography>
                 
             </CardContent>

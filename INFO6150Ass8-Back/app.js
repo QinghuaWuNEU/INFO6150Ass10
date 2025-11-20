@@ -11,8 +11,7 @@ const companyRoutes = require('./routes/companyRoutes');
 const cors = require('cors');
 const companyData = require('./companyData'); // <-- 1. 引入公司数据
 
-const userRoutes = require('./routes/userRoutes');
-const companyRoutes = require('./routes/companyRoutes'); // 假设 Job 路由被放在这里
+
 
 // 加载环境变量
 dotenv.config();
